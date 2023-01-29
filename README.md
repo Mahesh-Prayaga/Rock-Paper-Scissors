@@ -1,0 +1,1 @@
+This Project is a functional Rock Paper Scissors Game that can be played through the browser's console(for the time being). Click on the link mentioned in the About Section that is on the right side of the page to play!
