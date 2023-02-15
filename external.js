@@ -7,6 +7,7 @@ console.log("The Rock Paper Scissors Game\n");
 console.log("Rules are:\n");
 console.log("1. The First one to reach Score 3 Wins!\n");
 console.log("2. You Should Have Fun!!\n\n");
+console.log('Enter "game()" to start the game!');
 let playerScore = 0;
 let computerScore = 0;
 
@@ -55,15 +56,16 @@ function playRound() {
   }
 }
 
-for (let round = 1; (computerScore || playerScore) != 3; round++) {
-  console.log(`\nRound ${round}\n`);
-  playRound();
-  console.log(`Your Score: ${playerScore}`);
-  console.log(`Computer Score: ${computerScore}\n`);
-}
-
-if (computerScore > playerScore) {
-  console.log("\n\nComputer Won!");
-} else {
-  console.log("\n\nYou Won!");
+function game() {
+  for (let round = 1; (computerScore || playerScore) != 3; round++) {
+    console.log(`\nRound ${round}\n`);
+    playRound();
+    console.log(`Your Score: ${playerScore}`);
+    console.log(`Computer Score: ${computerScore}\n`);
+  }
+  if (computerScore > playerScore) {
+    console.log("\n\nComputer Won!");
+  } else {
+    console.log("\n\nYou Won!");
+  }
 }
