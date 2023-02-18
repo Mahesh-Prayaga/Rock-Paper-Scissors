@@ -29,6 +29,7 @@ function getComputerChoice() {
 }
 
 function playRound(getValue) {
+
   const computerChoice = getComputerChoice();
 
   if (getValue == 1) {
