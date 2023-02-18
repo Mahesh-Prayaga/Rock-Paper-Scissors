@@ -7,20 +7,27 @@ let getValue;
 let playerChoice;
 let playerScore = 0;
 let computerScore = 0;
+let numberRound = document.querySelector(".round-no");
 let res = document.querySelector(".result");
 const div = document.querySelector(".buttons");
+let cWon = document.querySelector(".computer-won");
+let pWon = document.querySelector(".player-won");
+let pScore = document.querySelector(".player-score");
+let cScore = document.querySelector(".computer-score");
+let round = 0;
 
 function rockSetter() {
   getValue = 1;
-  playRound(getValue);
+  round += 1;
+  playRound();
 }
 function paperSetter() {
   getValue = 2;
-  playRound(getValue);
+  playRound();
 }
 function scissorsSetter() {
   getValue = 3;
-  playRound(getValue);
+  playRound();
 }
 
 function getComputerChoice() {
@@ -28,7 +35,7 @@ function getComputerChoice() {
   return randomNum;
 }
 
-function playRound(getValue) {
+function playRound() {
   const computerChoice = getComputerChoice();
 
   if (getValue == 1) {
@@ -38,6 +45,8 @@ function playRound(getValue) {
   } else {
     playerChoice = "Scissors";
   }
+
+  numberRound.innerText = `Round ${round}`;
 
   pChoice.innerText = `You Pulled a ${playerChoice}`;
 
@@ -70,18 +79,21 @@ function playRound(getValue) {
     res.innerText = "You Lost!, Computer Won!";
     computerScore++;
   }
-}
 
-function game() {
-  for (let round = 1; (computerScore || playerScore) != 3; round++) {
-    console.log(`\nRound ${round}\n`);
-    playRound();
-    console.log(`Your Score: ${playerScore}`);
-    console.log(`Computer Score: ${computerScore}\n`);
-  }
-  if (computerScore > playerScore) {
-    console.log("\n\nComputer Won!");
+  pScore.innerText = `Your Score: ${playerScore}`;
+  cScore.innerText = `Computer Score: ${computerScore}`;
+
+  if ((computerScore || playerScore) == 3) {
+    if (computerScore > playerScore) {
+      cWon.innerText = `Computer Won!`;
+    } else {
+      pWon.innerText = "You Won!";
+    }
+    round = 0;
+    computerScore = 0;
+    playerScore = 0;
   } else {
-    console.log("\n\nYou Won!");
+    cWon.innerText = ``;
+    pWon.innerText = ``;
   }
 }
