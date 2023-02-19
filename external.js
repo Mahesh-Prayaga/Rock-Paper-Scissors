@@ -23,10 +23,12 @@ function rockSetter() {
 }
 function paperSetter() {
   getValue = 2;
+  round += 1;
   playRound();
 }
 function scissorsSetter() {
   getValue = 3;
+  round += 1;
   playRound();
 }
 
