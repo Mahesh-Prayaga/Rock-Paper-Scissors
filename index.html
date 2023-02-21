@@ -6,27 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS RPI UI</title>
     <script src="external.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="text">
-      <h1>The Rock Paper Scissors Game</h1>
-      <p>Rules are:</p>
-      <p>1. The First one to reach Score 3 Wins!</p>
-      <p>2. You Should Have Fun!!</p>
-    </div>
+    <div class="container">
+      <div class="inner-container">
+        <div class="text">
+          <h1>The Rock Paper Scissors Game</h1>
+          <p>Rules are:</p>
+          <p>1. The First one to reach Score 3 Wins!</p>
+          <p>2. You Should Have Fun!!</p>
+        </div>
 
-    <div class="buttons">
-      <button id="rock-button" onclick="rockSetter()">Rock</button>
-      <button id="paper-button" onclick="paperSetter()">Paper</button>
-      <button id="scissors-button" onclick="scissorsSetter()">Scissors</button>
-      <p class="round-no"></p>
-      <p class="p-choice"></p>
-      <p class="c-choice"></p>
-      <p class="result"></p>
-      <p class="player-score"></p>
-      <p class="computer-score"></p>
-      <p class="computer-won"></p>
-      <p class="player-won"></p>
+        <div class="buttons">
+          <button id="rock-button" onclick="rockSetter()">Rock</button>
+          <button id="paper-button" onclick="paperSetter()">Paper</button>
+          <button id="scissors-button" onclick="scissorsSetter()">
+            Scissors
+          </button>
+          <p class="round-no"></p>
+          <p class="p-choice"></p>
+          <p class="c-choice"></p>
+          <p class="result"></p>
+          <p class="player-score"></p>
+          <p class="computer-score"></p>
+          <p class="computer-won"></p>
+          <p class="player-won"></p>
+        </div>
+      </div>
     </div>
   </body>
 </html>

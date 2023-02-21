@@ -85,7 +85,7 @@ function playRound() {
   pScore.innerText = `Your Score: ${playerScore}`;
   cScore.innerText = `Computer Score: ${computerScore}`;
 
-  if ((computerScore || playerScore) == 3) {
+  if (computerScore == 3 || playerScore == 3) {
     if (computerScore > playerScore) {
       cWon.innerText = `Computer Won!`;
     } else {
