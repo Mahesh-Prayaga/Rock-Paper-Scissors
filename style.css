@@ -1,15 +1,63 @@
-.container {
+* {
+  margin: 0;
+  padidng: 0;
+  font-family: "Mynerve", sans-serif;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 300px;
+}
+
+.text {
+  text-align: center;
+}
+
+.button {
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 100px;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.choices {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
 }
 
-.inner-container {
-  border: 1px solid black;
-  padding: 50px;
-  margin-top: ;
+.scores {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
 }
 
-body {
-  background-image: url(rps.jpg);
+.round-no {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.result {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+h1 {
+  font-size: 70px;
+}
+
+.player-won,
+.computer-won {
+  color: darkblue;
+}
+
+p {
+  font-size: 30px;
 }

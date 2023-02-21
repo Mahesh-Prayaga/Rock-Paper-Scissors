@@ -50,46 +50,46 @@ function playRound() {
 
   numberRound.innerText = `Round ${round}`;
 
-  pChoice.innerText = `You Pulled a ${playerChoice}`;
+  pChoice.innerText = `You Pulled out ${playerChoice}`;
 
   if (computerChoice == 1) {
-    cChoice.innerText = `Computer Pulled a Rock`;
+    cChoice.innerText = `Computer Pulled out Rock`;
   } else if (computerChoice == 2) {
-    cChoice.innerText = `Computer Pulled a Paper`;
+    cChoice.innerText = `Computer Pulled out Paper`;
   } else {
-    cChoice.innerText = `Computer Pulled a Scissors`;
+    cChoice.innerText = `Computer Pulled out Scissors`;
   }
 
   if (computerChoice == getValue) {
     res.innerText = "It's a Draw!";
   } else if (computerChoice == 1 && getValue == 2) {
-    res.innerText = "You Won!, Computer Lost!";
+    res.innerText = "You Won!";
     playerScore++;
   } else if (computerChoice == 1 && getValue == 3) {
-    res.innerText = "You Lost!, Computer Won!";
+    res.innerText = "You Lost!";
     computerScore++;
   } else if (computerChoice == 2 && getValue == 1) {
-    res.innerText = "You Lost!, Computer Won!";
+    res.innerText = "You Lost!";
     computerScore++;
   } else if (computerChoice == 2 && getValue == 3) {
-    res.innerText = "You Won!, Computer Lost!";
+    res.innerText = "You Won!";
     playerScore++;
   } else if (computerChoice == 3 && getValue == 1) {
-    res.innerText = "You Won!, Computer Lost!";
+    res.innerText = "You Won!";
     playerScore++;
   } else if (computerChoice == 3 && getValue == 2) {
-    res.innerText = "You Lost!, Computer Won!";
+    res.innerText = "You Lost!";
     computerScore++;
   }
 
   pScore.innerText = `Your Score: ${playerScore}`;
   cScore.innerText = `Computer Score: ${computerScore}`;
 
-  if (computerScore == 3 || playerScore == 3) {
+  if (computerScore == 5 || playerScore == 5) {
     if (computerScore > playerScore) {
-      cWon.innerText = `Computer Won!`;
+      cWon.innerText = `Computer Won the Match!`;
     } else {
-      pWon.innerText = "You Won!";
+      pWon.innerText = "You Won the Match!";
     }
     round = 0;
     computerScore = 0;

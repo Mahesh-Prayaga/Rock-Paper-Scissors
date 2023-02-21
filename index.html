@@ -4,36 +4,47 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS RPI UI</title>
+    <title>Rock Paper Scissors</title>
     <script src="external.js" defer></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Mynerve&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="container">
       <div class="inner-container">
         <div class="text">
-          <h1>The Rock Paper Scissors Game</h1>
-          <p>Rules are:</p>
-          <p>1. The First one to reach Score 3 Wins!</p>
-          <p>2. You Should Have Fun!!</p>
+          <p class="round-no"></p>
+          <h1 class="computer-won" align="center" class="won"></h1>
+          <h1 class="player-won" align="center" class="won"></h1>
+          <h1 class="h1">Choose Your Weapon</h1>
         </div>
 
         <div class="buttons">
-          <button id="rock-button" onclick="rockSetter()">Rock</button>
-          <button id="paper-button" onclick="paperSetter()">Paper</button>
-          <button id="scissors-button" onclick="scissorsSetter()">
-            Scissors
+          <button id="rock-button" class="button" onclick="rockSetter()">
+            <img src="rock.webp" />
           </button>
-          <p class="round-no"></p>
+          <button id="paper-button" class="button" onclick="paperSetter()">
+            <img src="paper.webp" />
+          </button>
+          <button
+            id="scissors-button"
+            class="button"
+            onclick="scissorsSetter()"
+          >
+            <img src="scissors.webp" />
+          </button>
+        </div>
+        <h1 align="center" class="result"></h1>
+        <div class="choices">
           <p class="p-choice"></p>
           <p class="c-choice"></p>
-          <p class="result"></p>
+        </div>
+        <div class="scores">
           <p class="player-score"></p>
           <p class="computer-score"></p>
-          <p class="computer-won"></p>
-          <p class="player-won"></p>
         </div>
-      </div>
     </div>
   </body>
 </html>
