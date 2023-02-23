@@ -30,6 +30,7 @@
   align-items: center;
   justify-content: space-evenly;
   margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .scores {
@@ -59,5 +60,13 @@ h1 {
 }
 
 p {
-  font-size: 30px;
+  font-size: 35px;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+.result {
+  color: orangered;
 }

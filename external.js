@@ -50,35 +50,35 @@ function playRound() {
 
   numberRound.innerText = `Round ${round}`;
 
-  pChoice.innerText = `You Pulled out ${playerChoice}`;
+  pChoice.innerText = `You chose ${playerChoice}`;
 
   if (computerChoice == 1) {
-    cChoice.innerText = `Computer Pulled out Rock`;
+    cChoice.innerText = `Computer chooses Rock`;
   } else if (computerChoice == 2) {
-    cChoice.innerText = `Computer Pulled out Paper`;
+    cChoice.innerText = `Computer chooses Paper`;
   } else {
-    cChoice.innerText = `Computer Pulled out Scissors`;
+    cChoice.innerText = `Computer chooses Scissors`;
   }
 
   if (computerChoice == getValue) {
     res.innerText = "It's a Draw!";
   } else if (computerChoice == 1 && getValue == 2) {
-    res.innerText = "You Won!";
+    res.innerText = "You Won this round!";
     playerScore++;
   } else if (computerChoice == 1 && getValue == 3) {
-    res.innerText = "You Lost!";
+    res.innerText = "You Lost this round!";
     computerScore++;
   } else if (computerChoice == 2 && getValue == 1) {
-    res.innerText = "You Lost!";
+    res.innerText = "You Lost this round!";
     computerScore++;
   } else if (computerChoice == 2 && getValue == 3) {
-    res.innerText = "You Won!";
+    res.innerText = "You Won this round!";
     playerScore++;
   } else if (computerChoice == 3 && getValue == 1) {
-    res.innerText = "You Won!";
+    res.innerText = "You Won this round!";
     playerScore++;
   } else if (computerChoice == 3 && getValue == 2) {
-    res.innerText = "You Lost!";
+    res.innerText = "You Lost this round!";
     computerScore++;
   }
 
