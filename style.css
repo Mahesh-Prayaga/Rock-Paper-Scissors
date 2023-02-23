@@ -1,13 +1,12 @@
 * {
   margin: 0;
-  padidng: 0;
+  padding: 0;
   font-family: "Mynerve", sans-serif;
 }
 
 .buttons {
   display: flex;
-  justify-content: space-around;
-  margin-right: 300px;
+  justify-content: space-evenly;
 }
 
 .text {
@@ -18,7 +17,8 @@
   border: none;
   padding: 0;
   margin: 0;
-  width: 100px;
+  width: 330px;
+  box-shadow: none;
 }
 
 .button:hover {
@@ -30,7 +30,7 @@
   align-items: center;
   justify-content: space-evenly;
   margin-bottom: 20px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .scores {
@@ -47,11 +47,11 @@
 
 .result {
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 h1 {
-  font-size: 70px;
+  font-size: 55px;
 }
 
 .player-won,
@@ -60,11 +60,11 @@ h1 {
 }
 
 p {
-  font-size: 35px;
+  font-size: 25px;
 }
 
 h2 {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .result {
